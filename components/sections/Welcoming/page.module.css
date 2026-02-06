@@ -1,0 +1,160 @@
+.section{
+    padding:30px 0;
+    background:#00000;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.wrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 360px;
+  overflow: hidden;
+}
+.bottomButton {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.bgImage {
+  object-fit: cover;
+  z-index: 1;
+}
+.content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  padding: 60px;
+  color: white;
+}
+.left h2 {
+  font-size: 48px;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.left p {
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 520px;
+}
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.price {
+  display: flex;
+  align-items: flex-start;
+}
+
+.currency {
+  font-size: 32px;
+  margin-top: 10px;
+}
+
+.amount {
+  font-size: 96px;
+  font-weight: 700;
+  line-height: 1;
+  margin-left: 6px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0;
+}
+
+.list li {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.value {
+  margin: 12px 0 24px;
+  font-weight: 600;
+}
+.bottomButton {
+  margin-top: 40px;
+  text-align: center;
+}
+@media (max-width: 900px) {
+  .wrapper {
+    height: auto;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+    padding: 40px 24px;
+  }
+}
+.block-wrap {
+  background: #0f4c8a; 
+  color: #fff;
+}
+
+.wrapper {
+  display: grid;
+ 
+  gap: 20px 40px;
+  align-items: start;
+}
+
+
+.lhs-wrap {
+  grid-area: price;
+  display: flex;
+  align-items: flex-start;
+}
+
+.lhs-wrap sup {
+  font-size: 28px;
+  margin-top: 10px;
+}
+
+.count {
+  font-size: 96px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+
+.rhs-wrap {
+  grid-area: list;
+}
+
+.rhs-wrap p {
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+
+.subtitle {
+  grid-area: value;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+
+.primary-cta {
+  grid-area: cta;
+}
+
+.primary-cta a {
+  display: inline-block;
+  background: #b0006d;
+  color: #fff;
+  padding: 14px 32px;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+}

@@ -10,6 +10,7 @@ import { getHomePage } from "@/lib/wp";
 import CardSection from "@/components/sections/cardSection/page";
 import PatientFirst from "@/components/sections/patientFirst/page";
 import Services from "@/components/sections/Services/page";
+import Welcoming from "@/components/sections/Welcoming/page";
 export default async function Home() {
   const bannerData = await getHomePage();
   const imageUrl = bannerData?.heroImage?.node?.sourceUrl || null;
@@ -23,6 +24,7 @@ export default async function Home() {
       <CardSection />
       <PatientFirst />
       <Services/>
+      <Welcoming />
       {/* <WhyGentleDental />
       <PatientsComeFirst />
       <Services />
