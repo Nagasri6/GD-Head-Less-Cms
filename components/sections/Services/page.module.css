@@ -1,0 +1,145 @@
+.section {
+  padding: 30px 0;
+  background:#f9f9f9;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 60px;
+  align-items: start;
+}
+
+
+.content h2 {
+  font-size: 36px;
+  color: #0b4c8c;
+  margin-bottom: 16px;
+}
+
+.content p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.button {
+  background: #a8479a;
+  color: #fff;
+  border: none;
+  padding: 14px 28px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  margin: 0 2px 2px 0;
+}
+
+.card {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+  transform-origin: center center;
+  will-change: transform;
+}
+
+.card:hover .image {
+  transform: scale(1.06);
+}
+.baseOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0)
+  );
+  display: flex;
+  align-items: flex-end;
+  padding: 16px;
+  transition: opacity 0.3s ease;
+}
+
+.baseOverlay span {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.hoverOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(31, 79, 130, 0.8);
+  color: #fff;
+  padding: 24px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.hoverOverlay h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.hoverOverlay p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.learnMore {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.card:hover .hoverOverlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card:hover .baseOverlay {
+  opacity: 0;
+}
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

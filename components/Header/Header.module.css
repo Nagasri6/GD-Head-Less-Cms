@@ -1,0 +1,92 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.logo img {
+  max-width: 270px;
+}
+
+.nav {
+  display: flex;
+  gap: 28px;
+}
+
+.menuItem {
+  position: relative;
+}
+
+.menuItem > a {
+  font-weight: 600;
+  text-decoration: none;
+  color: #222;
+  padding: 8px 0;
+}
+
+.menuItem:hover > a {
+  color: #8a2d7d;
+}
+
+/* ===== MEGA MENU ===== */
+
+.megaMenu {
+  position: absolute;
+  top: 100%;
+  left: -200px;
+  width: 900px;
+  background: #fff;
+  padding: 32px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  display: none;
+  z-index: 100;
+}
+
+.menuItem:hover .megaMenu {
+  display: block;
+}
+
+.megaGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.megaColumn {
+  min-width: 160px;
+}
+
+.columnTitle {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-decoration: none;
+  color: #222;
+}
+
+.columnTitle:hover {
+  color: #8a2d7d;
+}
+
+.megaColumn ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.megaColumn li {
+  margin-bottom: 8px;
+}
+
+.megaColumn li a {
+  text-decoration: none;
+  color: #666;
+  font-size: 14px;
+}
+
+.megaColumn li a:hover {
+  color: #8a2d7d;
+}

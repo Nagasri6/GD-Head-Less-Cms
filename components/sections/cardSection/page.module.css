@@ -1,0 +1,11 @@
+.cardWrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.cardSection {
+    padding: 2rem 0;
+    background-color: #f9f9f9;
+}

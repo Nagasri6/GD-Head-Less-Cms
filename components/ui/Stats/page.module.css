@@ -1,0 +1,35 @@
+.statsWrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin: 40px 0;
+}
+
+.statItem {
+  flex: 1;
+  border-right: 1px solid #e6e4e6;
+  margin-right: 30px;
+  padding-right: 30px;
+  &:last-child{
+    border-right:none;
+  }
+}
+
+.value {
+  font-size: 50px;
+  font-weight: 600;
+  color: #212529;
+  margin-bottom: 8px;
+}
+
+.label {
+  font-size: 16px;
+  color: #6b6b6b;
+  max-width: 200px;
+}
+@media (max-width: 768px) {
+  .statsWrapper {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
