@@ -1,9 +1,10 @@
 "use client";
 
 import Link from "next/link";
+import { Globe } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-
+import { useRouter, usePathname } from "next/navigation";
 import styles from "./Header.module.css";
 import Button from "../ui/Button/page";
 import { graphqlClient } from "@/lib/graphql/client";
@@ -41,6 +42,21 @@ export default function Header() {
 
     fetchMenus();
   }, []);
+  const router = useRouter();
+  const pathname = usePathname();
+
+  // get current language from URL
+  const currentLang = pathname?.split("/")[1] || "en";
+
+  const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const newLang = e.target.value;
+
+    // remove existing language from path
+    const pathWithoutLang = pathname.replace(/^\/(en|es)/, "");
+
+    router.push(`/${newLang}${pathWithoutLang}`);
+  };
+
 
   const topLevelItems = menuItems.filter(
     (item) => item.parentId === null
@@ -92,7 +108,28 @@ export default function Header() {
             ) : null}
           </div>
         ))}
+
       </nav>
+
+      <div className={styles.rightActions}>
+        <div className={styles.languageWrapper}>
+          <Globe size={19} />
+
+          <select
+            value={currentLang}
+            onChange={handleLanguageChange}
+            className={styles.langSelect}
+            aria-label="Select language"
+          >
+            <option value="en">EN</option>
+            <option value="es">ES</option>
+          </select>
+        </div>
+
+        {/* <Button text="Book Now" href={`/${currentLang}/book-now`} /> */}
+      </div>
+
+
 
       <Button text="Book Now" href="/book-now" />
     </header>

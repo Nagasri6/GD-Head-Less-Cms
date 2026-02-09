@@ -90,3 +90,18 @@
 .megaColumn li a:hover {
   color: #8a2d7d;
 }
+.languageWrapper {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.languageWrapper svg {
+  color: #666;
+}
+.langSelect {
+  border: none;
+  background: transparent;
+  font-weight: 600;
+  cursor: pointer;
+}
